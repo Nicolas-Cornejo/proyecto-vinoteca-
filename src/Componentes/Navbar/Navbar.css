@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+header {
+    background-color: #4d0d18;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+li {
+    margin: 25px;
+}
+.img-carro {
+    width: 50px;
+}
+
+html {
+    --s: 300px; /* control the size*/
+    --c1: #400b15;
+    --c2: #bf3641;
+    --c3: #b39c82;
+    --c4: #734822;
+        background:
+            conic-gradient(at 50% calc(100%/6),var(--c1) 60deg,#0000 0),
+            conic-gradient(at calc(100%/6) 50%,#0000 240deg,var(--c1) 0),
+            conic-gradient(from 180deg at calc(100%/6) calc(500%/6),var(--c1) 60deg,#0000 0),
+            conic-gradient(from 180deg at calc(500%/6),#0000 240deg,var(--c1) 0) calc(4*.866*var(--s)) 0,
+            repeating-linear-gradient(-150deg,var(--c2) 0 calc(100%/6),#0000   0 50%),
+            repeating-linear-gradient(-30deg, var(--c3) 0 calc(100%/6),var(--c4) 0 50%);
+        background-size: calc(6*.866*var(--s)) calc(3*var(--s))
+    }
