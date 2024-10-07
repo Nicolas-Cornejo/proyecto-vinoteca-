@@ -18,7 +18,7 @@ const misProductos = [
     export const getUnProducto = (id)=>{
         return new Promise (resolve =>{
             setTimeout(() => {
-                const producto = misProductos.find(item => item.id === id)
+                const producto = misProductos.find((item) => item.id === Number(id))
                 resolve(producto)
             }, 100);
         })
@@ -26,7 +26,7 @@ const misProductos = [
     export const getProductosPorCategoria = (idCategoria)=>{
         return new Promise (resolve =>{
             setTimeout(() => {
-                const producto = misProductos.filter(item => item.idCat === idCategoria)
+                const producto = misProductos.filter((item) => item.idCat === Number(idCategoria))
                 resolve(producto)
             }, 100);
         })
