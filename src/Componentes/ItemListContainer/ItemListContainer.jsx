@@ -1,18 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { getProductos, getProductosPorCategoria } from '../../asynmock'
+// import { getProductos, getProductosPorCategoria } from '../../Asynmock'
 import ItemList from '../ItemList/Itemlist'
 import { useParams } from 'react-router-dom'
+import { getProducts} from "../../firebase/firebase.js";
 
 const ItemListContainer = () => {
-    const [productos, setProductos] = useState([])
-    const {idCategoria} = useParams()
+    const [productos, setProducts] = useState([])
 
-    useEffect(()=>{
-      const funcionProductos = idCategoria ? getProductosPorCategoria : getProductos;
-      funcionProductos(idCategoria)
-      .then(res => setProductos(res))
-    }, [idCategoria])
+    useEffect(() => {
+      getProducts().then((data) => setProducts(data));
+  }, []);
 
 
   return (

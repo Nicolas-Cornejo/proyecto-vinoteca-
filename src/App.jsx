@@ -3,6 +3,7 @@ import Navbar from "./Componentes/Navbar/Navbar"
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer'
 import {ItemDetailContainer} from './Componentes/ItemDetailContainer/ItemDetailContainer'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
+import ProductComponent from './Componentes/ProductComponent/ProductComponent'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
         </Routes>
       </BrowserRouter>
+      <ProductComponent />
     </>
   )
 }
